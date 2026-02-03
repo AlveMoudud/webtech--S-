@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUREUS | Exclusive Luxury</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- 1. CORE VARIABLES & RESET --- */
+        :root {
+            --bg-dark: #0a0a0a;
+            --bg-panel: #141414;
+            --gold-primary: #D4AF37; /* Metallic Gold */
+            --gold-light: #f1dfa3;
+            --text-white: #f5f5f5;
+            --text-grey: #a0a0a0;
+            --font-header: 'Cinzel', serif;
+            --font-body: 'Lato', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-white);
+            font-family: var(--font-body);
+            overflow-x: hidden;
+            line-height: 1.8;
+        }
+
+        /* --- 2. TYPOGRAPHY & UTILITIES --- */
+        h1, h2, h3 {
+            font-family: var(--font-header);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 400;
+        }
+
+        .gold-text {
+            color: var(--gold-primary);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .btn-luxury {
+            display: inline-block;
+            padding: 15px 40px;
+            border: 1px solid var(--gold-primary);
+            color: var(--gold-primary);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-luxury:hover {
+            background-color: var(--gold-primary);
+            color: var(--bg-dark);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+        }
+
+        /* --- 3. NAVIGATION --- */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 2rem 4rem;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-family: var(--font-header);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-white);
+            letter-spacing: 5px;
+        }
+
+        .nav-links a {
+            color: var(--text-white);
+            text-decoration: none;
+            margin-left: 3rem;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold-primary);
+        }
+
+        /* --- 4. HERO SECTION --- */
+        .hero {
+            height: 100vh;
+            /* Placeholder luxury interior image */
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1600607686527-6fb886090705?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Parallax effect */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, var(--gold-light), var(--gold-primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-white);
+            margin-bottom: 3rem;
+            letter-spacing: 2px;
+            font-weight: 300;
+        }
+
+        /* --- 5. INTRO / PHILOSOPHY --- */
+        .philosophy {
+            padding: 8rem 0;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--gold-primary);
+        }
+
+        .divider {
+            height: 1px;
+            width: 100px;
+            background-color: var(--gold-primary);
+            margin: 0 auto 3rem auto;
+        }
+
+        .philosophy p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--text-grey);
+            font-size: 1.1rem;
+        }
+
+        /* --- 6. SERVICES GRID --- */
+        .services {
+            background-color: var(--bg-panel);
+            padding: 6rem 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+
+        .card {
+            background: var(--bg-dark);
+            padding: 3rem 2rem;
+            border: 1px solid #222;
+            transition: transform 0.3s, border-color 0.3s;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--gold-primary);
+        }
+
+        .card h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--text-white);
+        }
+
+        .card p {
+            color: var(--text-grey);
+            font-size: 0.9rem;
+        }
+
+        .icon {
+            font-size: 2rem;
+            color: var(--gold-primary);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+
+        /* --- 7. IMAGE SHOWCASE --- */
+        .showcase {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .showcase-item {
+            flex: 1 1 50%;
+            height: 500px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .showcase-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .showcase-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .showcase-content {
+            flex: 1 1 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 4rem;
+            background-color: var(--bg-dark);
+        }
+
+        /* --- 8. FOOTER --- */
+        footer {
+            padding: 4rem 0;
+            text-align: center;
+            border-top: 1px solid #222;
+            margin-top: auto;
+        }
+
+        .footer-logo {
+            font-family: var(--font-header);
+            font-size: 2rem;
+            color: var(--gold-primary);
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        .copyright {
+            color: #555;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            margin-top: 2rem;
+        }
+
+        /* Mobile Responsive */
+        @media(max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .nav-links { display: none; } /* Simplified for demo */
+            .showcase-item, .showcase-content { flex: 1 1 100%; }
+            nav { padding: 1.5rem; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">AUREUS</div>
+        <div class="nav-links">
+            <a href="#">Residence</a>
+            <a href="#">Membership</a>
+            <a href="#">Concierge</a>
+            <a href="#">Contact</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <p>REDEFINING EXCELLENCE</p>
+        <h1>The Art of Living</h1>
+        <a href="#" class="btn-luxury">Explore the Estate</a>
+    </header>
+
+    <section class="philosophy">
+        <div class="container">
+            <h2 class="section-title">Opulence <span style="font-style:italic; font-family: var(--font-body); font-size: 0.7em; color: #fff;">&</span> Grace</h2>
+            <div class="divider"></div>
+            <p>
+                We curate environments for those who understand that true luxury is not just about ownership, 
+                but about the experience of seamless perfection. Welcome to a world where every detail is 
+                masterfully crafted to exceed the highest standards.
+            </p>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="container">
+            <div class="services-grid">
+                <div class="card">
+                    <span class="icon">✦</span>
+                    <h3>Private Concierge</h3>
+                    <p>24/7 dedicated assistance for your travel, dining, and lifestyle management needs.</p>
+                </div>
+                <div class="card">
+                    <span class="icon">♛</span>
+                    <h3>Elite Access</h3>
+                    <p>Priority entry to the world's most exclusive events, clubs, and private galas.</p>
+                </div>
+                <div class="card">
+                    <span class="icon">⟡</span>
+                    <h3>Fine Assets</h3>
+                    <p>Expert advisory on acquiring rare art, vintage wines, and high-performance vehicles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="showcase">
+        <div class="showcase-item">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Luxury Hotel">
+        </div>
+        <div class="showcase-content">
+            <h2>Unmatched Prestige</h2>
+            <div class="divider" style="margin: 1.5rem 0;"></div>
+            <p style="color: #a0a0a0; margin-bottom: 2rem;">
+                Immerse yourself in an atmosphere of refined elegance. Our properties and services are 
+                designed for the discerning few who demand nothing but the absolute best.
+            </p>
+            <a href="#" class="btn-luxury" style="align-self: flex-start;">Inquire Now</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <span class="footer-logo">AUREUS</span>
+            <p class="copyright">
+                &copy; 2026 AUREUS GROUP INTERNATIONAL. ALL RIGHTS RESERVED. <br>
+                DESIGNED FOR THE ELITE.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
