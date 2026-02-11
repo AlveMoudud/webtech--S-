@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tech Summit Registration</title>
+</head>
+<body>
+
+    <h1>Annual Tech Summit 2025 Registration</h1>
+    <p>Please complete the form below to reserve your seat.</p>
+
+    <form action="#" method="post">
+
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <label for="fullname">Full Name:</label><br>
+            <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+            <br><br>
+
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email" placeholder="student@aiub.edu" required>
+            <br><br>
+
+            <label for="pwd">Create Password:</label><br>
+            <input type="password" id="pwd" name="password" required>
+            <br><br>
+
+            <label for="dob">Date of Birth:</label><br>
+            <input type="date" id="dob" name="dob">
+            <br><br>
+
+            <p>Gender:</p>
+            
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label>
+            
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label>
+            
+            <input type="radio" id="other" name="gender" value="Other">
+            <label for="other">Other</label>
+            <br><br>
+        </fieldset>
+
+        <br>
+
+        <fieldset>
+            <legend>Academic Information</legend>
+
+            <label for="dept">Select Department:</label><br>
+            <select id="dept" name="department">
+                <option value="" disabled selected>-- Choose your Dept --</option>
+                <option value="CSE">Computer Science (CSE)</option>
+                <option value="EEE">Electrical Engineering (EEE)</option>
+                <option value="BBA">Business Admin (BBA)</option>
+                <option value="Arch">Architecture</option>
+            </select>
+            <br><br>
+
+            <p>Select Your Technical Skills:</p>
+            
+            <input type="checkbox" id="html" name="skills" value="HTML">
+            <label for="html">HTML5</label><br>
+            
+            <input type="checkbox" id="python" name="skills" value="Python">
+            <label for="python">Python Programming</label><br>
+            
+            <input type="checkbox" id="design" name="skills" value="Design">
+            <label for="design">Graphic Design</label><br>
+            
+            <input type="checkbox" id="network" name="skills" value="Networking">
+            <label for="network">Networking</label>
+            <br><br>
+        </fieldset>
+
+        <br>
+
+        <input type="submit" value="Register Now">
+        <input type="reset" value="Clear Form">
+
+    </form>
+
+    <br>
+    <hr>
+    
+    <footer>
+        <small>Lab Task 04 - Submitted by [MD.MOUDUD AHMED ALVE] - [23-50224-1]</small>
+    </footer>
+
+</body>
+</html>
