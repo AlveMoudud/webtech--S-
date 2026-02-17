@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Warehouse Layout: Box Model</title>
+    <link rel="stylesheet" href="L2TS-3.css">
+</head>
+<body>
+
+    <h1>Warehouse Inventory System</h1>
+
+    <section>
+        <h2>Section 1: Crate Dimensions (Box Model)</h2>
+        <p>Notice how the Red box is smaller than the Blue box, even though both have <code>width: 200px</code>.</p>
+        
+        <div class="crate crate-standard">
+            Standard Crate<br>(Content-Box)
+        </div>
+
+        <div class="crate crate-compact">
+            Compact Crate<br>(Border-Box)
+        </div>
+
+        <div class="crate crate-heavy">
+            Heavy Load<br>(Huge Margin)
+        </div>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Section 2: Shipment Labels (Display Types)</h2>
+
+        <span class="tracking-label">Tracking ID: #AB-999 (I am a SPAN acting like a BLOCK)</span>
+        <span class="tracking-label">Tracking ID: #AB-100</span>
+
+        <p>
+            Status Update: 
+            <div class="inline-tag">IN TRANSIT</div>
+            <div class="inline-tag">CHECKED</div>
+            (These are DIVs acting like TEXT).
+        </p>
+
+        <p>Container Yard (Inline-Block):</p>
+        <div class="cargo-icon">A1</div>
+        <div class="cargo-icon">A2</div>
+        <div class="cargo-icon">A3</div>
+    </section>
+
+    <hr>
+
+    <section>
+        <h2>Section 3: Missing Items (Visibility vs None)</h2>
+        
+        <p>1. <strong>Lost Cargo</strong> (display: none): It is written in the code below this line, but it takes up zero space.</p>
+        <div class="crate-standard lost-cargo">You cannot see me!</div>
+
+        <p>2. <strong>Ghost Cargo</strong> (visibility: hidden): The box below is invisible, but it still pushes this text down.</p>
+        <div class="ghost-cargo">I am hidden</div>
+        
+        <p>(End of Warehouse Report)</p>
+    </section>
+
+</body>
+</html>
